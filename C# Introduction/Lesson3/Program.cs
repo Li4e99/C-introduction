@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -127,6 +128,8 @@ namespace Lesson3
                 case 0:
                     b = false;
                     Console.WriteLine("Завершение работы приложения.");
+                    Console.ReadKey(true);
+                    Process.GetCurrentProcess().Kill();
                     break;
                 default:
                     Console.WriteLine("Вы ввели неправильный номер задания. Повторите попытку.");
